@@ -1,0 +1,7 @@
+kagglehub
+pandas
+pyarrow
+duckdb==1.1.1
+dbt-duckdb==1.7.4
+mashumaro==3.12
+click==8.1.7

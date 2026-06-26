@@ -1,0 +1,7 @@
+transform_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../datalake/elearning.duckdb
+      threads: 4

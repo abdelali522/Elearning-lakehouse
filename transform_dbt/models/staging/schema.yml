@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_student_info
+    columns:
+      - name: student_id
+        tests:
+          - not_null
+      - name: final_result
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Pass', 'Fail', 'Withdrawn', 'Distinction']
+
+  - name: stg_student_registration
+    columns:
+      - name: student_id
+        tests:
+          - not_null
+
+  - name: stg_student_assessment
+    columns:
+      - name: assessment_id
+        tests:
+          - not_null
+      - name: student_id
+        tests:
+          - not_null
+
+  - name: stg_student_vle
+    columns:
+      - name: student_id
+        tests:
+          - not_null
+      - name: total_clicks
+        tests:
+          - not_null
+
+  - name: stg_assessments
+    columns:
+      - name: assessment_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_vle
+    columns:
+      - name: site_id
+        tests:
+          - not_null
+
+  - name: stg_courses
+    columns:
+      - name: module_code
+        tests:
+          - not_null

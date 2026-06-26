@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: oulad
+    schema: main
+    tables:
+      - name: studentInfo
+      - name: studentRegistration
+      - name: studentAssessment
+      - name: studentVle
+      - name: assessments
+      - name: vle
+      - name: courses
